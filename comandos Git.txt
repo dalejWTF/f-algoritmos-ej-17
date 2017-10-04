@@ -1,0 +1,22 @@
+Git global setup
+
+git config --global user.name "DANIEL ALEJANDRO ULLOA MÁRQUEZ "
+git config --global user.email "daulloa2@utpl.edu.ec"
+
+Create a new repository
+
+git clone https://git.taw.utpl.edu.ec/ProgramAlg_UTPL/24daulloa2_ProgAlgOF17_git.git
+cd 24daulloa2_ProgAlgOF17_git
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder or Git repository
+
+cd existing_folder
+git init
+git remote add origin https://git.taw.utpl.edu.ec/ProgramAlg_UTPL/24daulloa2_ProgAlgOF17_git.git
+git add .
+git commit
+git push -u origin master
