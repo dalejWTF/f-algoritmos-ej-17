@@ -10,29 +10,29 @@ package institucion;
  * @author danulloa2 <danielulloam@gmail.com>
  */
 public class Asignatura {
-    private int creditos;
     private String nombre;
-
-    public int obtener_creditos() {
-        return creditos;
+    private int creditos;
+    
+    public void establecer_nombre(String n){
+        nombre = n;
     }
-
-    public void agregar_creditos(int creditos) {
-        this.creditos = creditos;
+    
+    public void establecrer_creditos(int n){
+        creditos = n;
     }
-
-    public String obtener_nombre() {
+    
+    public String obtener_nombre(){
         return nombre;
     }
-
-
-    public void agregar_nombre(String nombre) {
-        this.nombre = nombre;
+    
+    public int obtener_creditos(){
+        return creditos;
     }
     
     @Override
     public String toString(){
-        return String.format("Asignatura: %s con numero de creditos %d\n", obtener_nombre(), obtener_creditos());
+        String cadena = String.format("%s con número de crédito", 
+                obtener_nombre(), obtener_nombre());
+        return cadena;
     }
-    
 }

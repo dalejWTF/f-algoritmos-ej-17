@@ -12,69 +12,76 @@ import institucion.Asignatura;
  * @author danulloa2 <danielulloam@gmail.com>
  */
 public class Docente {
+    private String nombres;
+    private String apellidos;
+    private Titulo tit_tercer_nivel;
+    private Titulo tit_cuarto_nivel;
+    private Asignatura asignatura_1;
+    private Asignatura asignatura_2;
     
-    private String nombres, apellidos;
-    private Asignatura asignatura1;
-    private Asignatura asignatura2;
-    private Titulo titulo_tercer_nivel;
-    private Titulo titulo_cuarto_nivel;
+    public void establecer_nombres(String n){
+        nombres = n;
+    }
     
-    public String obtener_nombres() {
+    public String obtener_nombres(){
         return nombres;
     }
-
-    public void agregar_nombres(String nombres) {
-        this.nombres = nombres;
+    
+    public void establecer_apellidos(String n){
+        apellidos = n;
     }
-
-    public String obtener_apellidos() {
+    
+    public String obtener_apellidos(){
         return apellidos;
     }
-
-    public void agregar_apellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
-
-    public Asignatura obtener_asignatura1() {
-        return asignatura1;
-    }
-
-    public void agregar_asignatura1(Asignatura asignatura1) {
-        this.asignatura1 = asignatura1;
+    
+    public void establecer_tit_tercer_nivel(Titulo n){
+        tit_tercer_nivel = n;
     }
     
-    public Asignatura obtener_asignatura2() {
-        return asignatura2;
-    }
-
-    public void agregar_asignatura2(Asignatura asignatura2) {
-        this.asignatura2 = asignatura2;
-    }
-    public Titulo obtener_titulo_tercer_nivel() {
-        return titulo_tercer_nivel;
-    }
-
-    public void agregar_titulo_tercer_nivel(Titulo titulo_tercer_nivel) {
-        this.titulo_tercer_nivel = titulo_tercer_nivel;
+    public Titulo obtener_tit_tercer_nivel(){
+        return tit_tercer_nivel;
     }
     
-    public Titulo obtener_titulo_cuarto_nivel() {
-        return titulo_tercer_nivel;
+    public void establecer_tit_cuarto_nivel(Titulo n){
+        tit_cuarto_nivel = n;
     }
-
-    public void agregar_titulo_cuarto_nivel(Titulo titulo_cuarto_nivel) {
-        this.titulo_tercer_nivel = titulo_cuarto_nivel;
+    
+    public Titulo obtener_tit_cuarto_nivel(){
+        return tit_cuarto_nivel;
     }
-    @Override
+    
+    public void establecer_asignatura_1(Asignatura n){
+        asignatura_1 = n;
+    }
+    
+    public Asignatura obtener_asignatura_1(){
+        return asignatura_1;
+    }
+    
+    public void establecer_asignatura_2(Asignatura n){
+        asignatura_2 = n;
+    }
+    
+    public Asignatura obtener_asignatura_2(){
+        return asignatura_2;
+    }
+    
     public String toString(){
-        return String.format("Datos Docente\n"
-                + "Nombre: %s\n"
+        String cadena = String.format("Datos del Docente\n"
+                + "Nombres: %s\n"
                 + "Apellidos: %s\n"
                 + "Tiene a su cargo las asignaturas:\n"
-                + "%s"
-                + "%s"
-                + "%s"
-                + "%s\n", obtener_nombres(),obtener_apellidos(),obtener_asignatura1(),obtener_asignatura2(),obtener_titulo_tercer_nivel(),obtener_titulo_cuarto_nivel());
+                + "\t\tAsignatura 1: %s\n"
+                + "\t\tAsignatura 2: %s\n"
+                + "El docente tiene los siguiente títulos"
+                + " académicos\n"
+                + "\t\tTítulo 3er nivel: %s\n"
+                + "\t\tTítulo 3er nivel: %s", obtener_nombres(),
+                obtener_apellidos(),
+                obtener_asignatura_1(), obtener_asignatura_2(),
+                obtener_tit_tercer_nivel(), obtener_tit_cuarto_nivel());
+        return cadena;
     }
     
 }
